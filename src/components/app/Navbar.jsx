@@ -1,11 +1,12 @@
 import { IoShirtSharp } from "react-icons/io5";
 import { IoSearch } from "react-icons/io5";
+import styles from "../../styles/app/Navbar.module.css";
 
 function Navbar() {
 
     return (
 
-        <header>
+        <header className={styles.navbarContainer}>
             <div>
                 <IoShirtSharp />
                 <a>Wearhaus</a>
