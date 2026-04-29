@@ -1,0 +1,48 @@
+:root {
+
+    /* Font sizes */
+    --fs-sm: clamp(0.875rem, 0.83rem + 0.2vw, 1rem);
+    --fs-md: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+    --fs-lg: clamp(1.25rem, 1.1rem + 0.6vw, 1.6rem);
+    --fs-xl: clamp(1.8rem, 1.35rem + 1.8vw, 3rem);
+    --fs-xxl: clamp(2.5rem, 1.7rem + 3vw, 5rem);
+
+    /* colors */
+    --color-bg: #FAF8F4;
+    --color-card: #FFFFFF;
+    --color-text: #2b211d;
+    --color-muted: #80675d;
+    --color-primary: #ff6846;
+    --color-primary-soft: #ffe0d5;
+    --color-border: #dfcfc3;
+
+    /* Fonts */
+    --font-main: "Inter", sans-serif;
+    --font-heading: "Poppins", sans-serif;
+}
+
+* {
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+button,
+input,
+select,
+textarea {
+
+    font: inherit;
+}
+
+button {
+
+    cursor: pointer;
+}
+
+body {
+
+    font-family: "Inter", sans-serif, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    min-height: 100vh;
+}
