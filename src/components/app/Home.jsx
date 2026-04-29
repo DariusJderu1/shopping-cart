@@ -1,11 +1,10 @@
 // import { Link } from "react-router-dom";
 
-function HomePage() {
+function Home() {
 
     return (
 
         <main>
-            <p>Curated clothing for everyday style</p>
 
              <h1>
                 Build a wardrobe
@@ -25,4 +24,4 @@ function HomePage() {
     );
 }
 
-export default HomePage;
+export default Home;
