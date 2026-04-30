@@ -1,7 +1,7 @@
 :root {
 
     /* Font sizes */
-    --fs-sm: clamp(0.875rem, 1rem + 1vw, 1.2rem);
+    --fs-sm: clamp(0.875rem, 1rem + 1.1vw, 1.3rem);
     --fs-md: clamp(1rem, 1rem + 1.35vw, 1.5rem);
     --fs-lg: clamp(1.35rem, 1.35rem + 0.75vw, 2.6rem);
     --fs-xl: clamp(1.8rem, 1.35rem + 1.8vw, 3rem);
