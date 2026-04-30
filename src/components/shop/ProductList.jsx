@@ -1,9 +1,12 @@
 import ClothingCard from "./product-list/ClothingCard.jsx";
 
-function ProductList() {
+function ProductList({ clothesList }) {
 
     <ul>
-        
+        {clothesList.map(item => {
+
+            return <ClothingCard item={item} key={item.id} />
+        })}
     </ul>
 }
 

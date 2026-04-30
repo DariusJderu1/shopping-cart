@@ -34,11 +34,9 @@ function Shop() {
     return (
 
         <main>
-
             <h1>Our Collection</h1>
 
-            <ProductList />
-
+            <ProductList listOfClothes={clothesList} />
         </main>
     );
 }
