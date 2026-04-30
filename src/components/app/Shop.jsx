@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { shuffle } from "lodash";
+import CircularProgress from "@mui/material/CircularProgress";
 import ProductList from "../shop/ProductList.jsx";
 import getApiResponseBody from "../shop/helpers/getApiResponseBody.js";
 
@@ -30,6 +31,30 @@ function Shop() {
         })();
 
     }, []);
+
+    //==============================================
+
+    if(loading) {
+
+        return (
+
+            <main>
+                <h1>Our Collection</h1>
+
+                <CircularProgress aria-label="Loading…" />
+            </main>
+        );
+    }
+
+    if(!loading && error) {
+
+        return (
+
+            <main>
+                <h1>{error}</h1>
+            </main>
+        );
+    }
 
     return (
 
