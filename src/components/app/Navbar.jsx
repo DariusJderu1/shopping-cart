@@ -1,5 +1,6 @@
 import { IoShirtSharp } from "react-icons/io5";
 import { IoSearch } from "react-icons/io5";
+import { Link, NavLink } from "react-router";
 import styles from "../../styles/app/Navbar.module.css";
 
 function Navbar() {
@@ -7,20 +8,32 @@ function Navbar() {
     return (
 
         <header className={styles.navbarContainer}>
-            <div>
-                <IoShirtSharp />
-                <a>Wearhaus</a>
-            </div>
+            <Link className={styles.logo}>
+                <IoShirtSharp className={styles.logoIcon} />
+                <span>Wearhaus</span>
+            </Link>
 
-            <nav>
-                <a>Home</a>
-                <a>Shop</a>
-                <a>Cart</a>
+            <nav className={styles.navLinks}>
+                <NavLink to="/" className={ ({isActive}) => {
+
+                    return isActive ? `${styles.navLink} ${styles.activeLink}` : styles.navLink;
+                }}
+                >Home</NavLink>
+
+                <NavLink to="/shop" className={ ({isActive}) => {
+                    return isActive ? `${styles.navLink} ${styles.activeLink}` : styles.navLink;
+                }}
+                >Shop</NavLink>
+
+                <NavLink to="/cart" className={ ({isActive}) => {
+                    return isActive ? `${styles.navLink} ${styles.activeLink}` : styles.navLink;
+                }}
+                >Cart</NavLink>
             </nav>
 
-            <label htmlFor="search-bar">
-                <IoSearch />
-                <input type="search" id="search-bar"/>
+            <label htmlFor="search-bar" className={styles.searchBar}>
+                <IoSearch className={styles.searchIcon} />
+                <input type="search" id="search-bar" placeholder="Search for products"/>
             </label>
         </header>
     );

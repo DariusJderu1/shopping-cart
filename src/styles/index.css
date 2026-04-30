@@ -1,9 +1,9 @@
 :root {
 
     /* Font sizes */
-    --fs-sm: clamp(0.875rem, 0.83rem + 0.2vw, 1rem);
-    --fs-md: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
-    --fs-lg: clamp(1.25rem, 1.1rem + 0.6vw, 1.6rem);
+    --fs-sm: clamp(0.875rem, 1rem + 1vw, 1.2rem);
+    --fs-md: clamp(1rem, 1rem + 1.35vw, 1.5rem);
+    --fs-lg: clamp(1.35rem, 1.35rem + 0.75vw, 2.6rem);
     --fs-xl: clamp(1.8rem, 1.35rem + 1.8vw, 3rem);
     --fs-xxl: clamp(2.5rem, 1.7rem + 3vw, 5rem);
 
@@ -11,9 +11,9 @@
     --color-bg: #FAF8F4;
     --color-card: #FFFFFF;
     --color-text: #2b211d;
+    --color-dark: #1f1714;
     --color-muted: #80675d;
     --color-primary: #ff6846;
-    --color-primary-soft: #ffe0d5;
     --color-border: #dfcfc3;
 
     /* Fonts */
@@ -41,8 +41,16 @@ button {
     cursor: pointer;
 }
 
+a {
+
+    text-decoration: none;
+}
+
 body {
 
     font-family: "Inter", sans-serif, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     min-height: 100vh;
+
+    color: var(--color-dark);
+    background-color: var(--color-bg);
 }
