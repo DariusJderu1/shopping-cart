@@ -1,13 +1,15 @@
+import styles from "../../styles/app/Cart.module.css";
+
 function Cart() {
 
     return (
 
-        <main>
+        <main className={styles.cartContainer}>
+            <div className={styles.cartHeader}>
+                <h1 className={styles.title}>Shopping Cart</h1>
 
-            <h1>Shopping Cart</h1>
-
-            <p>Review your items below before proceeding to checkout.</p>
-
+                <p className={styles.description}>Review your items below before proceeding to checkout.</p>
+            </div>
         </main>
     );
 }

@@ -8,6 +8,7 @@ function App() {
 
         <div className={styles.appLayout}>
             <Navbar />
+            
             <Outlet />
         </div>
     );

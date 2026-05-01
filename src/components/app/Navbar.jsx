@@ -20,12 +20,12 @@ function Navbar() {
                 }}
                 >Home</NavLink>
 
-                <NavLink to="/shop" className={ ({isActive}) => {
+                <NavLink to="shop" className={ ({isActive}) => {
                     return isActive ? `${styles.navLink} ${styles.activeLink}` : styles.navLink;
                 }}
                 >Shop</NavLink>
 
-                <NavLink to="/cart" className={ ({isActive}) => {
+                <NavLink to="cart" className={ ({isActive}) => {
                     return isActive ? `${styles.navLink} ${styles.activeLink}` : styles.navLink;
                 }}
                 >Cart</NavLink>
