@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import ShopButton from "../ui/ShopButton.jsx";
 import styles from "../../styles/app/Home.module.css";
 
 function Home() {
@@ -19,9 +19,7 @@ function Home() {
                         clean looks, and pieces you can wear again and again.
                     </p>
 
-                    <Link to="/shop" className={styles.heroLink}>
-                        Explore the Collection
-                    </Link>
+                    <ShopButton />
                 </div>
             </section>
         </main>

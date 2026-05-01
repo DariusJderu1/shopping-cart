@@ -1,6 +1,7 @@
 import App from "./components/App.jsx";
 import Home from "./components/app/Home.jsx";
 import Shop from "./components/app/Shop.jsx";
+import Cart from "./components/app/Cart.jsx";
 
 const routes = [
 
@@ -11,6 +12,7 @@ const routes = [
 
             { index: true, element: <Home /> },
             { path: "shop", element: <Shop /> },
+            { path: "cart", element: <Cart /> },
         ]
     }
 ];
