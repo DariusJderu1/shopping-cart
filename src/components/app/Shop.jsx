@@ -3,6 +3,7 @@ import { shuffle } from "lodash";
 import CircularProgress from "@mui/material/CircularProgress";
 import ProductList from "../shop/ProductList.jsx";
 import getApiResponseBody from "../shop/helpers/getApiResponseBody.js";
+import styles from "../../styles/app/Shop.module.css";
 
 function Shop() {
 
@@ -38,9 +39,7 @@ function Shop() {
 
         return (
 
-            <main>
-                <h1>Our Collection</h1>
-
+            <main className={styles.shopContainer}>
                 <CircularProgress aria-label="Loading…" />
             </main>
         );
@@ -50,16 +49,16 @@ function Shop() {
 
         return (
 
-            <main>
-                <h1>{error}</h1>
+            <main className={styles.shopContainer}>
+                <h1 className={styles.title}>{error}</h1>
             </main>
         );
     }
 
     return (
 
-        <main>
-            <h1>Our Collection</h1>
+        <main className={styles.shopContainer}>
+            <h1 className={styles.title}>Our Collection</h1>
 
             <ProductList listOfClothes={clothesList} />
         </main>
