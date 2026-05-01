@@ -19,7 +19,7 @@ function Home() {
                         clean looks, and pieces you can wear again and again.
                     </p>
 
-                    <ShopButton />
+                    <ShopButton text="Explore the collection" />
                 </div>
             </section>
         </main>

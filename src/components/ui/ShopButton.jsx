@@ -1,12 +1,12 @@
 import { Link } from "react-router";
 import styles from "../../styles/ui/ShopButton.module.css";
 
-function ShopButton() {
+function ShopButton({ text }) {
 
     return (
 
         <Link to="/shop" className={styles.heroLink}>
-            Explore the Collection
+            {text}
         </Link>
     );
 }
