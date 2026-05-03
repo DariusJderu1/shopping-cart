@@ -1,41 +1,15 @@
-import { useState, useEffect } from "react";
-import { shuffle } from "lodash";
+import { useOutletContext } from "react-router";
 import CircularProgress from "@mui/material/CircularProgress";
 import ProductList from "../shop/ProductList.jsx";
-import getApiResponseBody from "../shop/helpers/getApiResponseBody.js";
 import styles from "../../styles/app/Shop.module.css";
 
 function Shop() {
 
-    const [clothesList, setClothesList] = useState([]);
-
-    const [error, setError] = useState(null);
-    const [loading, setLoading] = useState(true);
-
-    useEffect(() => {
-
-        (async () => {
-
-            try {
-
-                const menClothingList = await getApiResponseBody("https://fakestoreapi.com/products/category/men's%20clothing");
-                const womenClothingList = await getApiResponseBody("https://fakestoreapi.com/products/category/women's%20clothing");
-
-                setClothesList(shuffle(menClothingList.concat(womenClothingList)));
-                setLoading(false);
-
-            } catch(error) {
-
-                setError(error.message);
-            }
-
-        })();
-
-    }, []);
+    const shopData = useOutletContext();
 
     //==============================================
 
-    if(loading) {
+    if(shopData.loading) {
 
         return (
 
@@ -45,12 +19,12 @@ function Shop() {
         );
     }
 
-    if(!loading && error) {
+    if(!shopData.loading && shopData.error) {
 
         return (
 
             <main className={styles.shopContainer}>
-                <h1 className={styles.title}>{error}</h1>
+                <h1 className={styles.title}>{shopData.error}</h1>
             </main>
         );
     }
@@ -60,7 +34,7 @@ function Shop() {
         <main className={styles.shopContainer}>
             <h1 className={styles.title}>Our Collection</h1>
 
-            <ProductList listOfClothes={clothesList} />
+            <ProductList listOfClothes={shopData.clothesList} />
         </main>
     );
 }
