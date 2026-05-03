@@ -7,9 +7,6 @@ function Shop() {
 
     const shopData = useOutletContext();
 
-    //==================================
-    // React component return
-
     if(shopData.loading) {
 
         return (
