@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { shuffle } from "lodash";
-import getApiResponseBody from "../../shop/helpers/getApiResponseBody.js";
+import getApiResponseBody from "../helpers/getApiResponseBody.js";
 
 function useShopData() {
 
