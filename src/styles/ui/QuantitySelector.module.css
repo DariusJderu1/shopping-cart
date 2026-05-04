@@ -1,0 +1,64 @@
+.quantitySelector {
+
+    display: inline-grid;
+    grid-template-columns: 3.8rem 4.2rem 3.8rem;
+
+    overflow: hidden;
+
+    background-color: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: 0.6rem;
+}
+
+.quantityButton,
+.quantityInput {
+
+    height: 3.4rem;
+
+    color: var(--color-dark);
+    background-color: transparent;
+
+    border: none;
+}
+
+.quantityButton {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: var(--fs-md);
+    font-weight: 800;
+}
+
+.quantityButton:hover {
+
+    background-color: var(--color-bg);
+}
+
+.quantityInput {
+
+    width: 100%;
+
+    border-left: 1px solid var(--color-border);
+    border-right: 1px solid var(--color-border);
+
+    font-size: var(--fs-sm);
+    font-weight: 800;
+    text-align: center;
+
+    outline: none;
+}
+
+.quantityInput::-webkit-outer-spin-button,
+.quantityInput::-webkit-inner-spin-button {
+
+    margin: 0;
+
+    appearance: none;
+}
+
+.quantityInput {
+
+    appearance: textfield;
+}

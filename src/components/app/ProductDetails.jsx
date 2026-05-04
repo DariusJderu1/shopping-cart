@@ -6,9 +6,9 @@ import QuantitySelector from "../ui/QuantitySelector";
 function ProductDetails() {
 
     const shopData = useOutletContext();
-    const { id } = useParams();
+    const { productId } = useParams();
 
-    const product = shopData.find(item => item.id === parseInt(id));
+    const product = shopData.clothesList.find(item => item.id === parseInt(productId));
 
     return (
 
