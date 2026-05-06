@@ -1,24 +1,47 @@
+import { useState } from "react";
 import styles from "../../styles/ui/QuantitySelector.module.css";
 
 function QuantitySelector() {
 
+    const [value, setValue] = useState(1);
+
+    function handleClick(e) {
+
+        if(e.target.innerText === "-")
+            if(value - 1 >= 1)
+                setValue(value - 1);
+
+        if(e.target.innerText === "+")
+            if(value + 1 <= 100)
+                setValue(value + 1);
+    }
+
+    function handleInputChange(e) {
+
+        const number = Number(e.target.value);
+
+        setValue(number);
+    }
+
     return (
 
         <div className={styles.quantitySelector}>
-            <button type="button" className={styles.quantityButton} aria-label="Decrease quantity">
+            <button type="button" className={styles.quantityButton} onClick={handleClick} aria-label="Decrease quantity">
                 -
             </button>
 
             <input
                 className={styles.quantityInput}
                 type="number"
+                value={value}
+                onChange={handleInputChange}
                 min="1"
                 max="100"
                 defaultValue="1"
                 aria-label="Quantity"
             />
 
-            <button type="button" className={styles.quantityButton} aria-label="Increase quantity">
+            <button type="button" className={styles.quantityButton} onClick={handleClick} aria-label="Increase quantity">
                 +
             </button>
         </div>
