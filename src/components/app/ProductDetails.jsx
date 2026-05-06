@@ -17,7 +17,7 @@ function ProductDetails() {
 
         return (
 
-            <main className={styles.productDetailsContainer}>
+            <main className={styles.productDetailsPageContainer}>
                 <CircularProgress aria-label="Loading…" />
             </main>
         );
@@ -27,8 +27,18 @@ function ProductDetails() {
     
         return (
 
-            <main className={styles.productDetailsContainer}>
-                <h1>{shopData.error}</h1>
+            <main className={styles.productDetailsPageContainer}>
+                <h1 className={styles.title}>{shopData.error}</h1>
+            </main>
+        );
+    }
+
+    if(!product) {
+
+        return (
+
+            <main className={styles.productDetailsPageContainer}>
+                <h1 className={styles.title}>Product not found</h1>
             </main>
         );
     }
@@ -37,26 +47,26 @@ function ProductDetails() {
 
         <main className={styles.productDetailsPageContainer}>
             <article className={styles.productContainer}>
-                <div>
-                    <img src={product.image} alt={product.title} />
+                <div className={styles.imageWrapper}>
+                    <img className={styles.productImage} src={product.image} alt={product.title} />
                 </div>
 
-                <div>
+                <div className={styles.detailsCard}>
                     <div className={styles.productInfo}>
-                        <h1>{product.title}</h1>
-                        <span>${product.price}</span>
+                        <h1 className={styles.title}>{product.title}</h1>
+                        <span className={styles.price}>${product.price}</span>
                     </div>
 
-                    <hr />   
+                    <hr className={styles.divider} />   
 
-                    <p>{product.description}</p>
-                    
-                    <hr />
+                    <p className={styles.description}>{product.description}</p>
+
+                    <hr className={styles.divider} />
 
                     <form className={styles.formContainer}>
                         <QuantitySelector />
 
-                        <button type="submit">
+                        <button className={styles.addToCartButton} type="submit">
                             <FaShoppingCart />
                             Add to Cart
                         </button>
