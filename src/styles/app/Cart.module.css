@@ -1,6 +1,6 @@
 .cartContainer {
 
-    min-height: calc(100vh - 5.5rem);
+    flex: 1;
     padding: 4rem 6rem;
 
     background-color: var(--color-bg);

@@ -1,6 +1,6 @@
 .home {
 
-    min-height: calc(100vh - 5.5rem);
+    flex: 1;
     padding: 6rem 4rem;
 
     display: flex;

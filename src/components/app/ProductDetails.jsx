@@ -2,7 +2,7 @@ import { useParams, useOutletContext } from "react-router";
 import { FaShoppingCart } from "react-icons/fa";
 import CircularProgress from "@mui/material/CircularProgress";
 import QuantitySelector from "../ui/QuantitySelector";
-// import styles from "../../styles/app/ProductDetails.module.css";
+import styles from "../../styles/app/ProductDetails.module.css";
 
 function ProductDetails() {
 
@@ -17,7 +17,7 @@ function ProductDetails() {
 
         return (
 
-            <main>
+            <main className={styles.productDetailsContainer}>
                 <CircularProgress aria-label="Loading…" />
             </main>
         );
@@ -27,7 +27,7 @@ function ProductDetails() {
     
         return (
 
-            <main>
+            <main className={styles.productDetailsContainer}>
                 <h1>{shopData.error}</h1>
             </main>
         );
@@ -35,7 +35,7 @@ function ProductDetails() {
 
     return (
 
-        <main>
+        <main className={styles.productDetailsContainer}>
             <article>
                 <div>
                     <img src={product.image} alt={product.title} />
