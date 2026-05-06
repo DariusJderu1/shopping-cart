@@ -35,20 +35,25 @@ function ProductDetails() {
 
     return (
 
-        <main className={styles.productDetailsContainer}>
-            <article>
+        <main className={styles.productDetailsPageContainer}>
+            <article className={styles.productContainer}>
                 <div>
                     <img src={product.image} alt={product.title} />
                 </div>
 
                 <div>
-                    <h1>{product.title}</h1>
-                    <span>${product.price}</span>
-                    <hr />                    
+                    <div className={styles.productInfo}>
+                        <h1>{product.title}</h1>
+                        <span>${product.price}</span>
+                    </div>
+
+                    <hr />   
+
                     <p>{product.description}</p>
+                    
                     <hr />
 
-                    <form>
+                    <form className={styles.formContainer}>
                         <QuantitySelector />
 
                         <button type="submit">
