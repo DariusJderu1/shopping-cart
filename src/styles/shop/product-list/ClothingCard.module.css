@@ -4,7 +4,7 @@
     width: 100%;
 }
 
-.clothingCard > article {
+.clothingCard article {
 
     height: 100%;
 
@@ -81,5 +81,4 @@
     font-size: var(--fs-md);
     font-weight: 800;
 }
-
 /* Card body */

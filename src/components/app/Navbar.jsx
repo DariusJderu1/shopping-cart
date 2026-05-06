@@ -8,7 +8,7 @@ function Navbar() {
     return (
 
         <header className={styles.navbarContainer}>
-            <Link className={styles.logo}>
+            <Link className={styles.logo} to="/">
                 <IoShirtSharp className={styles.logoIcon} />
                 <span>Wearhaus</span>
             </Link>
@@ -20,12 +20,12 @@ function Navbar() {
                 }}
                 >Home</NavLink>
 
-                <NavLink to="shop" className={ ({isActive}) => {
+                <NavLink to="/shop" className={ ({isActive}) => {
                     return isActive ? `${styles.navLink} ${styles.activeLink}` : styles.navLink;
                 }}
                 >Shop</NavLink>
 
-                <NavLink to="cart" className={ ({isActive}) => {
+                <NavLink to="/cart" className={ ({isActive}) => {
                     return isActive ? `${styles.navLink} ${styles.activeLink}` : styles.navLink;
                 }}
                 >Cart</NavLink>
