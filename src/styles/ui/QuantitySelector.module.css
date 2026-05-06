@@ -33,7 +33,7 @@
 
 .quantityButton:hover {
 
-    background-color: var(--color-bg);
+    color: var(--color-primary);
 }
 
 .quantityInput {
