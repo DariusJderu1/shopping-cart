@@ -29,11 +29,11 @@
 
     font-size: var(--fs-md);
     font-weight: 800;
-}
 
-.quantityButton:hover {
+    &:hover {
 
-    color: var(--color-primary);
+        color: var(--color-primary);
+    }
 }
 
 .quantityInput {
@@ -62,3 +62,28 @@
 
     appearance: textfield;
 }
+
+/* Small */
+.small {
+
+    grid-template-columns: 2.7rem 3.1rem 2.7rem;
+
+    border-radius: 0.5rem;
+}
+
+.small .quantityButton,
+.small .quantityInput {
+
+    height: 2.5rem;
+}
+
+.small .quantityButton {
+
+    font-size: 1rem;
+}
+
+.small .quantityInput {
+
+    font-size: 0.95rem;
+}
+/* Small */

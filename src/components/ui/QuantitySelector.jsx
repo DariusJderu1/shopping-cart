@@ -1,9 +1,11 @@
 import { useState } from "react";
 import styles from "../../styles/ui/QuantitySelector.module.css";
 
-function QuantitySelector() {
+function QuantitySelector({ size }) {
 
     const [value, setValue] = useState(1);
+
+    const sizeClass = size === "small" ? styles.small : "";
 
     function handleClick(e) {
 
@@ -25,7 +27,7 @@ function QuantitySelector() {
 
     return (
 
-        <div className={styles.quantitySelector}>
+        <div className={`${styles.quantitySelector} ${sizeClass}`}>
             <button type="button" className={styles.quantityButton} onClick={handleClick} aria-label="Decrease quantity">
                 -
             </button>
