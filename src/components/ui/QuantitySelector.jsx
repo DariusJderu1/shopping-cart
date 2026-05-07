@@ -23,6 +23,9 @@ function QuantitySelector({ size }) {
         const number = Number(e.target.value);
 
         setValue(number);
+
+        if(number === 0)
+            setValue(1);
     }
 
     return (
