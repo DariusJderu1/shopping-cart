@@ -13,6 +13,15 @@ function cartHasProduct(cartItems, id) {
     return false;
 }
 
+function totalNumberOfItems(cartItems) {
+
+    return cartItems.reduce((total, currentItem) => {
+
+        return total + currentItem.quantity;
+        
+    }, 0);
+}
+
 function App() {
 
     const shopData = useShopData();
@@ -20,7 +29,7 @@ function App() {
 
     function handleItemAdd(newItem) {
 
-        // { productId: -, quantity: -}
+        // { productId: -, quantity: - }
         if(cartHasProduct(cartItems, newItem.productId)) {
 
             const newCartItemsArray = cartItems.map(item => {
@@ -43,7 +52,7 @@ function App() {
     return (
 
         <div className={styles.appLayout}>
-            <Navbar />
+            <Navbar numberOfItems={totalNumberOfItems(cartItems)}/>
             
             <Outlet context={[shopData, handleItemAdd]}/>
         </div>
