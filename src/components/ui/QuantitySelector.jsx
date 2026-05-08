@@ -43,6 +43,7 @@ function QuantitySelector({ size }) {
                 min="1"
                 max="100"
                 defaultValue="1"
+                name="quantity-selector"
                 aria-label="Quantity"
             />
 

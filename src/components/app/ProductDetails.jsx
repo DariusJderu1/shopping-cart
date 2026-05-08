@@ -6,10 +6,20 @@ import styles from "../../styles/app/ProductDetails.module.css";
 
 function ProductDetails() {
 
-    const shopData = useOutletContext();
+    const [shopData, handleItemAdd] = useOutletContext();
     const { productId } = useParams();
 
     const product = shopData.clothesList.find(item => item.id === parseInt(productId));
+
+    function handleSubmit(e) {
+
+        e.preventDefault();
+
+        const form = e.target;
+        const numberOfProducts = form.elements["quantity-selector"].value;
+
+        handleItemAdd({productId: productId, quantity: numberOfProducts});
+    }
 
     //======================================================
 
@@ -63,7 +73,7 @@ function ProductDetails() {
 
                     <hr className={styles.divider} />
 
-                    <form className={styles.formContainer}>
+                    <form className={styles.formContainer} onSubmit={handleSubmit}>
                         <QuantitySelector />
 
                         <button className={styles.addToCartButton} type="submit">

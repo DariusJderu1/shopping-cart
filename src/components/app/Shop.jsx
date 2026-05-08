@@ -5,7 +5,7 @@ import styles from "../../styles/app/Shop.module.css";
 
 function Shop() {
 
-    const shopData = useOutletContext();
+    const [shopData] = useOutletContext();
 
     if(shopData.loading) {
 
