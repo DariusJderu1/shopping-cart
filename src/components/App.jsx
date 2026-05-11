@@ -54,7 +54,7 @@ function App() {
         <div className={styles.appLayout}>
             <Navbar numberOfItems={totalNumberOfItems(cartItems)}/>
             
-            <Outlet context={[shopData, handleItemAdd]}/>
+            <Outlet context={[shopData, handleItemAdd, cartItems]}/>
         </div>
     );
 }

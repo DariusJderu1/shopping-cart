@@ -14,7 +14,7 @@ function ErrorPage() {
 
                 <p className={styles.description}>The page you are looking for doesn't exist.</p>
 
-                <ShopButton text="Back to Homepage" />
+                <ShopButton text="Back to shop" />
             </div>
         </main>
     );
