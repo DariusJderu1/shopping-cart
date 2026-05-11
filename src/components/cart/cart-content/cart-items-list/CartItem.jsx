@@ -20,7 +20,7 @@ function CartItem({ item }) {
                 </div>
                 
                 <div>
-                    <QuantitySelector size="small"/>
+                    <QuantitySelector size="small" initialValue={quantity} />
                     <FaTrash />
                 </div>
             </article>

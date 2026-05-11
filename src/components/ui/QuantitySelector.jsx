@@ -1,9 +1,9 @@
 import { useState } from "react";
 import styles from "../../styles/ui/QuantitySelector.module.css";
 
-function QuantitySelector({ size }) {
+function QuantitySelector({ size, initialValue = 1 }) {
 
-    const [value, setValue] = useState(1);
+    const [value, setValue] = useState(initialValue);
 
     const sizeClass = size === "small" ? styles.small : "";
 
