@@ -7,7 +7,7 @@ function CartContent({ cartItems }) {
 
         <main>
             <div>
-                <CartItemsList />
+                <CartItemsList cartItems={cartItems} />
                 
                 <OrderSummary />
             </div>

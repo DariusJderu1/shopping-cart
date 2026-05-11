@@ -18,7 +18,10 @@ function ProductDetails() {
         const form = e.target;
         const numberOfProducts = Number(form.elements["quantity-selector"].value);
 
-        handleItemAdd({productId: productId, quantity: numberOfProducts});
+        //!!!!!!!!!!!!!
+        //form.elements["quantity-selector"].value = "1";
+
+        handleItemAdd({product: product, quantity: numberOfProducts});
     }
 
     //======================================================

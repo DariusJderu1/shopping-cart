@@ -7,7 +7,7 @@ import styles from "../styles/App.module.css";
 function cartHasProduct(cartItems, id) {
 
     for(const item of cartItems)
-        if(item.productId === id)
+        if(item.product.id === id)
             return true;
 
     return false;
@@ -30,15 +30,15 @@ function App() {
     function handleItemAdd(newItem) {
 
         // { productId: -, quantity: - }
-        if(cartHasProduct(cartItems, newItem.productId)) {
+        if(cartHasProduct(cartItems, newItem.product.id)) {
 
             const newCartItemsArray = cartItems.map(item => {
 
-                if(item.productId !== newItem.productId)
+                if(item.product.id !== newItem.product.id)
                     return item;
 
                 else
-                    return {productId: item.productId, quantity: item.quantity + newItem.quantity}
+                    return {product: item.product, quantity: item.quantity + newItem.quantity};
             });
 
             setCartItems(newCartItemsArray);
