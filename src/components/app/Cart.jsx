@@ -1,5 +1,6 @@
 import { useOutletContext } from "react-router";
-import EmptyCart from "../cart/EmptyCart";
+import EmptyCart from "../cart/EmptyCart.jsx";
+import CartContent from "../cart/CartContent.jsx";
 import styles from "../../styles/app/Cart.module.css";
 
 function Cart() {
@@ -16,7 +17,7 @@ function Cart() {
 
             {cartItems.length === 0 ?
                 <EmptyCart /> :
-                <div></div>}
+                <CartContent cartItems={cartItems} />}
         </main>
     );
 }
