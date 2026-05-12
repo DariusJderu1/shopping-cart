@@ -1,11 +1,7 @@
-/* .pricingContainer {
-
-    display: grid;
-    grid-template: auto auto / auto auto;
-    justify-content: space-between;
-} */
-
 .orderSummary {
+
+    position: sticky;
+    top: 7rem;
 
     flex: 0 1 26rem;
     align-self: flex-start;
