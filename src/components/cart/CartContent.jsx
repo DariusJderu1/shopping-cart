@@ -6,11 +6,11 @@ function CartContent({ cartItems, handleItemDelete, handleChangeItemQuantity }) 
 
     return (
 
-        <main className={styles.cartContentContainer}>
+        <div className={styles.cartContentContainer}>
             <CartItemsList cartItems={cartItems} handleItemDelete={handleItemDelete} handleChangeItemQuantity={handleChangeItemQuantity} />
             
             <OrderSummary cartItems={cartItems} />
-        </main>
+        </div>
     );
 }
 
