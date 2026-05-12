@@ -15,7 +15,7 @@ function CartItem({ item }) {
 
                     <div>
                         <h2>{product.title}</h2>
-                        <span>{`$${product.price} each (Subtotal: $${product.price * quantity})`}</span>
+                        <span>{`$${(product.price).toFixed(2)} each (Subtotal: $${(product.price * quantity).toFixed(2)})`}</span>
                     </div>
                 </div>
                 
