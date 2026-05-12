@@ -1,6 +1,16 @@
 import confetti from "canvas-confetti";
 
-function OrderSummary() {
+function sumAllPrices(cartItems) {
+
+    return cartItems.reduce((total, item) => {
+
+        return total + (item.quantity * item.product.price);
+    }, 0);
+}
+
+function OrderSummary({ cartItems }) {
+
+    const total = sumAllPrices(cartItems);
 
     return (
 
@@ -11,16 +21,16 @@ function OrderSummary() {
 
             <div>
                 <span>Subtotal</span>
-                <span></span>
+                <span>{`$${total}`}</span>
                 <span>Shipping</span>
-                <span></span>
+                <span>$5.00</span>
             </div>
 
             <hr />
 
             <div>
                 <h3>Total</h3>
-                <span></span>
+                <span>{`$${total + 5}`}</span>
             </div>
 
             <button onClick={() => {
