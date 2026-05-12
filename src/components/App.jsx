@@ -46,7 +46,13 @@ function App() {
             
         else
             setCartItems([...cartItems, newItem]);
+    }
 
+    function handleItemDelete(id) {
+
+        const newCartItemsArray = cartItems.filter(item => item.product.id !== id);
+
+        setCartItems(newCartItemsArray);
     }
 
     return (
@@ -54,7 +60,7 @@ function App() {
         <div className={styles.appLayout}>
             <Navbar numberOfItems={totalNumberOfItems(cartItems)}/>
             
-            <Outlet context={[shopData, handleItemAdd, cartItems]}/>
+            <Outlet context={[shopData, handleItemAdd, cartItems, handleItemDelete]}/>
         </div>
     );
 }
