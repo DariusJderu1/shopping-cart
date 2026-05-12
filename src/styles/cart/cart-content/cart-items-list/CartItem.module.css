@@ -65,17 +65,21 @@
 .productInfo {
 
     min-width: 0;
+    max-width: 38rem;
 }
 
 .title {
 
+    max-width: 30rem;
     margin-bottom: 0.45rem;
 
     color: var(--color-dark);
 
     font-family: var(--font-heading);
     font-size: var(--fs-sm);
-    line-height: 1.2;
+    line-height: 1.25;
+
+    overflow-wrap: break-word;
 }
 
 .priceLine {
