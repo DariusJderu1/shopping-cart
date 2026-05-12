@@ -1,4 +1,7 @@
-.cartItemsList {
+.cartItemsListContainer {
+
+    flex: 1 1 52rem;
+    min-width: 0;
 
     display: flex;
     flex-direction: column;

@@ -1,6 +1,9 @@
 .cartContentContainer {
-    
+
     display: flex;
+    align-items: flex-start;
     gap: 2rem;
     flex-wrap: wrap;
+
+    width: min(100%, 86rem);
 }
