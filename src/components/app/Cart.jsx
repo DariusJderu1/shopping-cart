@@ -5,7 +5,7 @@ import styles from "../../styles/app/Cart.module.css";
 
 function Cart() {
 
-    const [, , cartItems, handleItemDelete] = useOutletContext();
+    const [, , cartItems, handleItemDelete, handleChangeItemQuantity] = useOutletContext();
 
     return (
 
@@ -17,7 +17,7 @@ function Cart() {
 
             {cartItems.length === 0 ?
                 <EmptyCart /> :
-                <CartContent cartItems={cartItems} handleItemDelete={handleItemDelete} />}
+                <CartContent cartItems={cartItems} handleItemDelete={handleItemDelete} handleChangeItemQuantity={handleChangeItemQuantity} />}
         </main>
     );
 }

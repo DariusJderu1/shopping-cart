@@ -55,12 +55,27 @@ function App() {
         setCartItems(newCartItemsArray);
     }
 
+    function handleChangeItemQuantity(id, quantity) {
+
+        const newCartItemsArray = cartItems.map(item => {
+
+            if(item.product.id !== id)
+                return item;
+
+            else
+                return {product: item.product, quantity: quantity};
+                
+        });
+
+        setCartItems(newCartItemsArray);
+    }
+
     return (
 
         <div className={styles.appLayout}>
             <Navbar numberOfItems={totalNumberOfItems(cartItems)}/>
             
-            <Outlet context={[shopData, handleItemAdd, cartItems, handleItemDelete]}/>
+            <Outlet context={[shopData, handleItemAdd, cartItems, handleItemDelete, handleChangeItemQuantity]}/>
         </div>
     );
 }

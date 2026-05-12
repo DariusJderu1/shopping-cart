@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "../../styles/ui/QuantitySelector.module.css";
 
-function QuantitySelector({ size, initialValue = 1 }) {
+function QuantitySelector({ size, initialValue = 1, onQuantityChange }) {
 
     const [value, setValue] = useState(initialValue);
 
@@ -10,22 +10,40 @@ function QuantitySelector({ size, initialValue = 1 }) {
     function handleClick(e) {
 
         if(e.target.innerText === "-")
-            if(value - 1 >= 1)
+            if(value - 1 >= 1) {
+
                 setValue(value - 1);
+                if(onQuantityChange)
+                    onQuantityChange(value - 1);
+            }
 
         if(e.target.innerText === "+")
-            if(value + 1 <= 100)
+            if(value + 1 <= 100) {
+
                 setValue(value + 1);
+                if(onQuantityChange)
+                    onQuantityChange(value + 1);
+            }
     }
 
     function handleInputChange(e) {
 
         const number = Number(e.target.value);
 
-        setValue(number);
+        if(number === 0 || number < 0) {
 
-        if(number === 0)
             setValue(1);
+            if(onQuantityChange)
+                    onQuantityChange(1);
+        }
+            
+        else {
+
+            setValue(number);
+            if(onQuantityChange)
+                    onQuantityChange(number);
+        }
+            
     }
 
     return (
@@ -40,8 +58,6 @@ function QuantitySelector({ size, initialValue = 1 }) {
                 type="number"
                 value={value}
                 onChange={handleInputChange}
-                min="1"
-                max="100"
                 name="quantity-selector"
                 aria-label="Quantity"
             />

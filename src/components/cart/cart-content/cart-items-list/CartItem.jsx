@@ -2,10 +2,15 @@ import { FaTrash } from "react-icons/fa6";
 import QuantitySelector from "../../../ui/QuantitySelector.jsx";
 import styles from "../../../../styles/cart/cart-content/cart-items-list/CartItem.module.css";
 
-function CartItem({ item, handleItemDelete }) {
+function CartItem({ item, handleItemDelete, handleChangeItemQuantity }) {
 
     const product = item.product;
     const quantity = item.quantity;
+
+    function handleOnQuantityChange(newQuantity) {
+
+        handleChangeItemQuantity(product.id, newQuantity);
+    }
 
     return (
 
@@ -23,7 +28,7 @@ function CartItem({ item, handleItemDelete }) {
                 </div>
                 
                 <div className={styles.actions}>
-                    <QuantitySelector size="small" initialValue={quantity} />
+                    <QuantitySelector size="small" initialValue={quantity} onQuantityChange={handleOnQuantityChange} />
                     
                     <button onClick={() => handleItemDelete(product.id)} className={styles.removeButton} type="button" aria-label={`Remove ${product.title} from cart`}>
                         <FaTrash className={styles.trashIcon} />
