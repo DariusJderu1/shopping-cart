@@ -4,7 +4,7 @@ A browser-based shopping cart application built with React. Users can browse clo
 
 The products are fetched from the Fake Store API and filtered to use men's and women's clothing.
 
-Live Demo: https://shopping-cart-darius.netlify.app/cart
+Live Demo: https://shopping-cart-darius.netlify.app
 
 ## Technologies Used
 
