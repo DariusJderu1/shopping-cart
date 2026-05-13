@@ -1,16 +1,61 @@
-# React + Vite
+# Wearhaus Shopping Cart
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A browser-based shopping cart application built with React. Users can browse clothing products, view product details, add items to a cart, update quantities, and remove items from the cart.
 
-Currently, two official plugins are available:
+The products are fetched from the Fake Store API and filtered to use men's and women's clothing.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Live Demo: 
 
-## React Compiler
+## Technologies Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+React: Component-based structure and state management for the shop and cart flow.
 
-## Expanding the ESLint configuration
+CSS Modules: Scoped styling for pages, product cards, cart items, and reusable UI components.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Vite: Development server and production build tool.
+
+React Router: Handles navigation between the home, shop, product details, cart, and error pages.
+
+Fake Store API: Provides the clothing product data and images.
+
+Material UI: Used for the cart badge and loading spinner.
+
+Lodash: Used for shuffling the product list.
+
+React Icons: Used for icons in the navbar, product details page, and cart.
+
+canvas-confetti: Used for the checkout button effect.
+
+## Features
+
+Product Browsing: Users can view a list of clothing products from the shop page.
+
+Product Details: Each product has a details page with image, title, price, description, quantity selector, and add-to-cart button.
+
+Cart Count: The navbar shows the total number of items currently in the cart.
+
+Cart Management: Users can remove items from the cart and change item quantities.
+
+Order Summary: The cart page displays subtotal, shipping, and total price.
+
+Loading and Error States: The app displays loading and error UI while fetching product data.
+
+## Running the Project
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Create a production build:
+
+```bash
+npm run build
+```
